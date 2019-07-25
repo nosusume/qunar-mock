@@ -10,6 +10,7 @@ import './assets/reset.css'
 import './assets/border.css'
 // 移动端300ms延迟
 import fastClick from 'fastclick'
+import './assets/iconfont.css'
 
 Vue.config.productionTip = false
 fastClick.attach(document.body)
