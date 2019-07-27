@@ -2,11 +2,11 @@
   <div>
     <div class="recommend-title">热销推荐</div>
     <ul>
-      <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
-        <img :src="item.imgUrl" :alt="item.pageInfo" class="item-img" />
+      <li class="item border-bottom" v-for="item of list" :key="item.id">
+        <img :src="item.imgUrl" :alt="item.title" class="item-img" />
         <div class="item-info">
-          <p class="item-title">{{ item.pageInfo }}</p>
-          <p class="item-desc">{{ item.pageDesc }}</p>
+          <p class="item-title">{{ item.title }}</p>
+          <p class="item-desc">{{ item.desc }}</p>
           <button class="item-button">查看详情</button>
         </div>
       </li>
@@ -17,17 +17,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [
-        {
-          id: '0001',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1508/89/895a1b7add84f23faca053ce9e3153db.water.jpg_200x200_99ae30ee.jpg',
-          pageInfo: '北京欢乐谷',
-          pageDesc: '北京欢乐谷是国家AAAA级旅游景区'
-        }
-      ]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
