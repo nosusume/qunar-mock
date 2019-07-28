@@ -1,13 +1,18 @@
 <template>
-  <city-header></city-header>
+  <div>
+    <city-header></city-header>
+    <city-serach></city-serach>
+  </div>
 </template>
 
 <script>
 import CityHeader from './cityHeader'
+import CitySerach from './serach'
 export default {
   name: 'City',
   components: {
-    CityHeader
+    CityHeader,
+    CitySerach
   }
 }
 </script>
