@@ -5,7 +5,7 @@
   </div>
   <div class="serach-content"  ref="serach" v-show="keyword">
     <ul>
-      <li v-for="item of list" :key="item.id" class="serach-item border-bottom">{{ item.name }}</li>
+      <li v-for="item of list" :key="item.id" class="serach-item border-bottom" @click="handleCityClick(item.name)">{{ item.name }}</li>
       <li class="serach-item border-bottom" v-show="hasNoData">没有找到搜索的数据</li>
     </ul>
   </div>
@@ -29,6 +29,12 @@ export default {
   computed: {
     hasNoData () {
       return !this.list.length
+    }
+  },
+  methods: {
+    handleCityClick (city) {
+      this.$store.dispatch('changeCity', city)
+      this.$router.push('/')
     }
   },
   watch: {
