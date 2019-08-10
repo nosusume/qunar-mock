@@ -59,7 +59,7 @@ export default {
   activated () {
     // 重新显示时，会调用
     if (this.lastCity !== this.city) {
-      this.city = this.lastCity
+      this.lastCity = this.city
       this.getHomeInfo()
     }
   }
