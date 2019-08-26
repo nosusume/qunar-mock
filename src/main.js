@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import 'babel-polyfill'
 // 多端样式统一
 import './assets/reset.css'
 // import 'normalize.css'
